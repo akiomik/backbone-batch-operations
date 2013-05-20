@@ -18,12 +18,14 @@ var Documents = Backbone.BatchCollection.extend({
     url: 'http://example.com'
 });
 var docs = new Documents({});
+
 // Insert
 var models = [
     {'some': 'data'}
 ];
 docs.add(models, {silent: true});
 docs.save();    // POST
+
 // Update
 docs.each(function(doc) {
     var json = doc.toJSON();
@@ -31,6 +33,7 @@ docs.each(function(doc) {
     doc.set(json, {silent: true});
 });
 docs.save(); // PUT
+
 // Delete
 var models = docs.models;
 docs.remove(models, {silent: true});
