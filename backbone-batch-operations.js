@@ -42,6 +42,9 @@
                 url: options.url,
                 data: JSON.stringify(options.data),
                 contentType: options.contentType,
+                success: options.success,
+                error: options.error,
+                complete: options.complete,
                 context: this
             };
 
@@ -80,4 +83,3 @@
 
     _.extend(Backbone.BatchCollection.prototype, Backbone.Event);
 }).call(this);
-
