@@ -26,13 +26,13 @@
 
             // check collection status
             if (this.isEmpty()) {
-                this.batchDelete(options);
+                return this.batchDelete(options);
             }
             else if (this.isNew()) {
-                this.batchAdd(options);
+                return this.batchAdd(options);
             }
             else {
-                this.batchUpdate(options);
+                return this.batchUpdate(options);
             }
         },
         batch: function(options) {
@@ -49,7 +49,9 @@
             };
 
             // batch update models
-            $.ajax(ajaxOptions).done(function(res) {
+            var xhr = $.ajax(ajaxOptions)
+
+            xhr.done(function(res) {
                 if (!options.silent) {
                     this.trigger('sync', this.models);
                 }
@@ -60,24 +62,25 @@
                 this.trigger('request', this.models);
             }
 
+            return xhr;
         },
         batchDelete: function(options) {
             if (_.isUndefined(options.type)) {
                 options.type = 'PUT';
             }
-            this.batch(options);
+            return this.batch(options);
         },
         batchUpdate: function(options) {
             if (_.isUndefined(options.type)) {
                 options.type = 'PUT';
             }
-            this.batch(options);
+            return this.batch(options);
         },
         batchAdd: function(options) {
             if (_.isUndefined(options.type)) {
                 options.type = 'POST';
             }
-            this.batch(options);
+            return this.batch(options);
         }
     });
 
