@@ -1,0 +1,22 @@
+{
+  "name": "backbone-batch-operations",
+  "main": "backbone-batch-operations.js",
+  "homepage": "https://github.com/akiomik/backbone-batch-operations",
+  "authors": [
+    "Akiomi Kamakura <akiomik@gmail.com>"
+  ],
+  "description": "batch operation plugin for backbone.js",
+  "moduleType": [],
+  "keywords": [
+    "backbone",
+    "batch"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

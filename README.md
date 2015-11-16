@@ -3,6 +3,13 @@ backbone-batch-operations
 This is a backbone.js plugin provides batch operations.
 
 ## Installation
+
+Install with Bower:
+
+```bash
+bower install backbone-batch-operations
+```
+
 Add following line to your html.
 
 ```html
