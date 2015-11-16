@@ -18,7 +18,7 @@
                 options = {};
             }
             _.defaults(options, {
-                url: this.url,
+                url: _.result(this, 'url'),
                 contentType: 'application/json',
                 silent: false,
                 data: this.toJSON()
