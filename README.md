@@ -1,5 +1,5 @@
 backbone-batch-operations
---------------------------
+==========================
 This is a backbone.js plugin provides batch operations.
 
 ## Installation
